@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+
+    <bean id="faceBookService" class="com.journaldev.beanservice.FaceBookService"/>
+
+    <bean class="com.journaldev.beanservice.FaceBookXMLApp">
+        <property name="messageService" ref="faceBookService"/>
+    </bean>
+</beans>
